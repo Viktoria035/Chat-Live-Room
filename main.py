@@ -50,7 +50,7 @@ def room():
     room = session.get("room")
     if room is None or session.get("name") is None or room not in rooms:
         return redirect(url_for("home"))
-    return render_template("room.html")
+    return render_template("room.html", code=room)
 
 @socketio.on("connect")
 def connect(auth):
@@ -85,3 +85,4 @@ if __name__ == "__main__":
     socketio.run(app, debug=True)
 
 # session is temporary storage for a user's session data that is stored on the server. The session can be manipulated by the server and we can change the value.
+# if there is only one person in the room and we refresh the page, the room will be deleted.
