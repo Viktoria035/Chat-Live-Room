@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="left-section">
+    <img src="{{ url_for('static', filename='images/home-image.webp') }}" alt="Start image" class="home-image" />
+  </div>
+  <div class="right-section">
+    <div class="form-container">
+      <h2>Lets Chat!</h2>
+      <p>Join a room or create a new one:</p>
+      <form method="POST">
+        <label>Your name:</label>
+        <input type="text" placeholder="Name" name="name" value="{{ name }}" required />
+
+        <label>Join a room:</label>
+        <input type="text" placeholder="Room Code" name="code" value="{{ code }}" />
+        <button type="submit" name="join" value="1">Join a Room</button>
+        <br />
+
+        <label>Or create a new room:</label>
+        <button type="submit" name="create" class="create-room-btn" value="1">Create a Room</button>
+
+        {% if error %}
+          <ul>
+            <li class="error-message">{{ error }}</li>
+          </ul>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+{% endblock %}
