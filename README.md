@@ -65,14 +65,15 @@ chat-live-room/
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Victoria035/Chat-Live-Room.git
+    git clone https://github.com/Viktoria035/Chat-Live-Room.git
     cd Chat-Live-Room
     ```
 2. Create and activate a virtual environment
     ```bash
     python -m venv venv
     source venv/bin/activate    # On Linux/macOS
-    ./venv/Scripts/activate.bat # On Windows
+    ./venv/Scripts/activate.bat # On Windows(if you are using Command Prompt)
+    ./venv/Scripts/Activate.ps1 # On Windows(if you are using PowerShell)
 3. Install dependencies:
     ```bash
     pip install -r requirements.txt
