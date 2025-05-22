@@ -6,7 +6,9 @@ rooms = {}
 
 def create_app():
     # Initialize the Flask application
-    app = Flask(__name__, template_folder='templates', static_folder='../static')
+    app = Flask(__name__, template_folder='../templates', static_folder='../static')
+    # put the secret key here; this is just a random string
+    # in a real application, you should use a more secure method to generate and store the secret key
     app.config["SECRET_KEY"] = 'fksdhkdshfd'
 
     # Register Blueprints
