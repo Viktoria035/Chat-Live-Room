@@ -162,3 +162,4 @@ cython_debug/
 #  mine
 app.py
 app/app.py
+app/__main__.py
